@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta name="color-scheme" content="dark" />
+    <script>
+      // Pick the theme before the first paint so there is no flash (the app re-applies it from src/theme.js).
+      (function () {
+        var pref = 'system';
+        try { pref = (JSON.parse(localStorage.getItem('wine-atlas-settings-v1')) || {}).theme || 'system'; } catch (e) {}
+        var light = pref === 'light' || (pref !== 'dark' && window.matchMedia('(prefers-color-scheme: light)').matches);
+        document.documentElement.dataset.theme = light ? 'light' : 'dark';
+      })();
+    </script>
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Treilles · Roussillon — Wine Atlas</title>
+    <meta name="description" content="Treilles, Roussillon (Côtes du Roussillon &amp; Rivesaltes). 111.5 ha of mapped vines and 24 lieux-dits, with soil, geology, terrain and weather from open French data." />
+
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Wine Atlas" />
+    <!-- 2026-11-13: was "black-translucent" (page under the status bar). iOS then drew only 59 pt less than the screen, leaving an empty strip under the tab bar. "black" gives a solid bar and a window that fits. Revert to black-translucent to go back; the icon must be re-added to the Home Screen for a change to apply. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- Link previews (WhatsApp, iMessage, Slack…). https://wine-atlas.github.io/ is the full site address, filled in at build time. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wine Atlas" />
+    <meta property="og:title" content="Treilles · Roussillon — Wine Atlas" />
+    <meta property="og:description" content="Treilles, Roussillon (Côtes du Roussillon &amp; Rivesaltes). 111.5 ha of mapped vines and 24 lieux-dits, with soil, geology, terrain and weather from open French data." />
+    <meta property="og:url" content="https://wine-atlas.github.io/roussillon/cotes-du-roussillon/ro_village_11398/" />
+    <meta property="og:image" content="https://wine-atlas.github.io/og-image.png?v=2" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A relief tile with contour lines and vine rows, and the words Wine Atlas" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Treilles · Roussillon — Wine Atlas" />
+    <meta name="twitter:description" content="Treilles, Roussillon (Côtes du Roussillon &amp; Rivesaltes). 111.5 ha of mapped vines and 24 lieux-dits, with soil, geology, terrain and weather from open French data." />
+    <meta name="twitter:image" content="https://wine-atlas.github.io/og-image.png?v=2" />
+    <script type="module" crossorigin src="/assets/index-BlF787dy.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BRz-VkW3.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
